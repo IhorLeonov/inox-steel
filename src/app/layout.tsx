@@ -7,8 +7,10 @@ import './globals.css';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Inox Steel',
-  description: 'The best inox steel construction company in Ukraine',
+  title: 'INOX',
+  description: 'The best steel construction company in Ukraine',
+  // icons: '/icons/favicon-yellow.png',
+  icons: '/icons/favicon-gray.png',
 };
 
 export default function RootLayout({

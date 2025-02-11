@@ -9,14 +9,24 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        accent: '#8c32ff',
-        gray: '#7c7c81',
+        white: '#FFFFFF',
+        accent: '#002A41', // #002A41
+        yellow: '#FFCD00',
+        blue: '#002A41',
+        black: '#1A1A1A',
+        gray: '#B6BBC4',
+        'light-grey': '#DCDEDF',
+        'dark-grey': '#3E444D',
       },
       screens: {
-        'lg-max': '1113px',
+        sm: '375px',
+        md: '768px',
+        lg: '1024px',
+        xl: '1440px',
+        // 'lg-max': '1113px',
       },
       fontSize: {
-        md: '1.125rem',
+        // md: '1.125rem',
       },
     },
   },

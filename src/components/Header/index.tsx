@@ -1,18 +1,27 @@
+'use client';
+
 import { Container } from '@/components/Container';
 import { LINKS } from '@/components/Header/constants';
-import { Logo } from '@/components/Logo';
+
+import MenuIcon from '../common/BurgerMenuIcon';
+import LogoIcon from '../common/LogoIcon';
 
 export const Header = () => {
   return (
-    <header className="fixed top-0 z-10 flex h-[88px] w-full items-center px-[60px]">
+    <header
+      className={`fixed top-0 z-10 flex w-full items-center py-[5.333vw]`}
+    >
       <Container className="flex items-center justify-between">
-        <Logo />
+        <LogoIcon className="w-[10.667vw]" />
+        <button>
+          <MenuIcon className="w-[9.6vw]" />
+        </button>
 
-        <nav>
+        <nav className="hidden xl:block">
           <ul className="flex gap-4">
             {LINKS.map(({ label, link }) => (
               <li key={link}>
-                <a href={`#${link}`} className="text-[1.125rem]">
+                <a href={`#${link}`} className="text-[1.389vw]">
                   {label}
                 </a>
               </li>
