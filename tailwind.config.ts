@@ -2,7 +2,7 @@ import type { Config } from 'tailwindcss';
 
 const config: Config = {
   content: [
-    './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/sections/**/*.{js,ts,jsx,tsx,mdx}',
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
@@ -17,17 +17,21 @@ const config: Config = {
         gray: '#B6BBC4',
         'light-grey': '#DCDEDF',
         'dark-grey': '#3E444D',
+        'button-text-hover': '#FFFFFF',
       },
       screens: {
         sm: '375px',
+        smm: '500px',
         md: '768px',
         lg: '1024px',
         xl: '1440px',
-        // 'lg-max': '1113px',
       },
-      fontSize: {
-        // md: '1.125rem',
+      backdropFilter: {
+        blur: 'blur(2px)',
       },
+      // blur: {
+      //   '52': '52px',
+      // },
     },
   },
   plugins: [],

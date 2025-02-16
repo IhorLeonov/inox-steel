@@ -1,33 +1,46 @@
-'use client';
-
 import { Container } from '@/components/Container';
 import { LINKS } from '@/components/Header/constants';
 
-import MenuIcon from '../common/BurgerMenuIcon';
-import LogoIcon from '../common/LogoIcon';
+import Button from '../Button';
+import MenuIcon from '../Icons/BurgerMenu';
+import LogoIcon from '../Icons/LogoFull';
+import LangTabs from '../LangTabs';
 
 export const Header = () => {
   return (
     <header
-      className={`fixed top-0 z-10 flex w-full items-center py-[5.333vw]`}
+      className={`fixed top-0 z-50 flex h-[52px] w-full items-center backdrop-blur-sm md:h-[68px]`}
     >
       <Container className="flex items-center justify-between">
-        <LogoIcon className="w-[10.667vw]" />
-        <button>
-          <MenuIcon className="w-[9.6vw]" />
-        </button>
+        <LogoIcon className="h-7 fill-dark-grey hover:fill-white md:h-9" />
 
-        <nav className="hidden xl:block">
-          <ul className="flex gap-4">
-            {LINKS.map(({ label, link }) => (
+        <nav className="mx-auto hidden lg:block">
+          <ul className="flex gap-10 xl:gap-20">
+            {LINKS.map(({ label, link, type }) => (
               <li key={link}>
-                <a href={`#${link}`} className="text-[1.389vw]">
+                <a
+                  href={`${type}${link}`}
+                  className="hover:text-white focus:text-white"
+                >
                   {label}
                 </a>
               </li>
             ))}
           </ul>
         </nav>
+
+        <Button
+          icon="arrow"
+          className="ml-auto mr-5 hidden md:flex lg:ml-0 xl:mr-10"
+        >
+          Зробити замовлення
+        </Button>
+
+        <button className="lg:hidden">
+          <MenuIcon className="h-9" />
+        </button>
+
+        <LangTabs select="ua" className="hidden lg:flex" />
       </Container>
     </header>
   );

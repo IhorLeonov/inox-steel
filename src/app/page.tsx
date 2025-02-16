@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <div>
       <Header />
-      <main className="mt-[88px]">
+      <main className="mt-[52px] md:mt-[68px]">
         <Hero />
         <Services />
         <Works />

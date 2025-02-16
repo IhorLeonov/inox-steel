@@ -1,19 +1,27 @@
 'use client';
 
-import classNames from 'classnames';
-import { ReactNode } from 'react';
+import cn from 'classnames';
+import { ComponentPropsWithoutRef, ReactNode } from 'react';
 
-type ContainerProps = {
+type ContainerProps = ComponentPropsWithoutRef<'div'> & {
+  tag?: 'div' | 'section';
   children: ReactNode;
-  className?: string;
 };
 
-export const Container = ({ children, className }: ContainerProps) => {
+const styles = 'mx-auto w-full max-w-[1440px] px-4 md:px-6 xl:px-10';
+
+export const Container = ({
+  children,
+  className,
+  tag = 'div',
+}: ContainerProps) => {
   return (
-    <div
-      className={classNames('mx-auto w-full max-w-[1440px] px-4', className)}
-    >
-      {children}
-    </div>
+    <>
+      {tag === 'div' ? (
+        <div className={cn(styles, className)}>{children}</div>
+      ) : (
+        <section className={cn(styles, className)}>{children}</section>
+      )}
+    </>
   );
 };
