@@ -10,14 +10,13 @@ const config: Config = {
     extend: {
       colors: {
         white: '#FFFFFF',
-        accent: '#002A41', // #002A41
+        accent: '#FFFFFF', // #002A41
         yellow: '#FFCD00',
         blue: '#002A41',
         black: '#1A1A1A',
         gray: '#B6BBC4',
         'light-grey': '#DCDEDF',
         'dark-grey': '#3E444D',
-        'button-text-hover': '#FFFFFF',
       },
       screens: {
         sm: '375px',

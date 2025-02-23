@@ -15,7 +15,7 @@ export default function LangTabs({ select, className }: LangTabsProps) {
     >
       <button
         className={cn(
-          'py-0.5 hover:text-accent focus:text-accent',
+          'py-0.5 hover:border-accent hover:text-accent focus:text-accent',
           select === 'ua' && 'border-b border-black font-normal text-black',
         )}
       >
@@ -23,7 +23,7 @@ export default function LangTabs({ select, className }: LangTabsProps) {
       </button>
       <button
         className={cn(
-          'py-0.5 hover:text-accent focus:text-accent',
+          'py-0.5 hover:border-accent hover:text-accent focus:text-accent',
           select === 'ru' && 'border-b border-black font-normal text-black',
         )}
       >

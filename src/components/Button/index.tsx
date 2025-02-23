@@ -23,7 +23,7 @@ export default function Button({
       {...props}
       className={cn(
         'flex h-10 items-center justify-center rounded-full bg-white px-6',
-        'hover:text-button-text-hover focus:text-button-text-hover hover:bg-accent focus:bg-accent',
+        'hover:bg-dark-grey hover:text-white focus:bg-dark-grey focus:text-white',
         icon && 'gap-1',
         className,
       )}

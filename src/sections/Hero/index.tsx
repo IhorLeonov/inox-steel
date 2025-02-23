@@ -7,13 +7,13 @@ export const Hero = () => {
   return (
     <Container
       tag="section"
-      className="relative overflow-visible pb-[400px] pt-[70px] md:min-h-[calc(100vh_-_68px)] md:pb-[600px] md:pt-[80px] lg:pb-[480px] xl:pb-[360px] xl:pt-[120px]"
+      className="relative overflow-visible pb-[40px] pt-[70px] md:min-h-[calc(100vh_-_68px)] md:pb-[600px] md:pt-[80px] lg:pb-[480px] xl:pb-[360px] xl:pt-[120px]"
     >
-      <h1 className="smm:translate-x-[-2vw] w-full translate-x-[-3vw] text-center text-[39.7vw] leading-[1] text-accent md:translate-x-[-12px] md:text-start md:text-[178px] xl:translate-x-[-24px] xl:text-[320px]">
+      <h1 className="w-full translate-x-[-3vw] text-center text-[39.7vw] leading-[1] text-dark-grey smm:translate-x-[-2vw] md:translate-x-[-12px] md:text-start md:text-[178px] xl:translate-x-[-24px] xl:text-[320px]">
         INOX
       </h1>
 
-      <h2 className="mt-5 text-center text-[5.333vw] font-normal uppercase md:mt-7 md:max-w-[420px] md:text-start md:text-[32px] xl:mt-[40px] xl:max-w-[570px] xl:text-[44px]">
+      <h2 className="mt-5 text-center text-[5.333vw] font-normal uppercase text-accent md:mt-7 md:max-w-[420px] md:text-start md:text-[32px] xl:mt-[40px] xl:max-w-[570px] xl:text-[44px]">
         Індивідуальні рішення з нержавіючої сталі
       </h2>
 

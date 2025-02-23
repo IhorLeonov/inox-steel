@@ -3,7 +3,7 @@ import { LINKS } from '@/components/Header/constants';
 
 import Button from '../Button';
 import MenuIcon from '../Icons/BurgerMenu';
-import LogoIcon from '../Icons/LogoFull';
+import LogoIcon from '../Icons/Logo';
 import LangTabs from '../LangTabs';
 
 export const Header = () => {
@@ -12,7 +12,7 @@ export const Header = () => {
       className={`fixed top-0 z-50 flex h-[52px] w-full items-center backdrop-blur-sm md:h-[68px]`}
     >
       <Container className="flex items-center justify-between">
-        <LogoIcon className="h-7 fill-dark-grey hover:fill-white md:h-9" />
+        <LogoIcon className="h-7 fill-dark-grey md:h-9" />
 
         <nav className="mx-auto hidden lg:block">
           <ul className="flex gap-10 xl:gap-20">
