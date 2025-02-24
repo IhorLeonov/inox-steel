@@ -1,12 +1,11 @@
 'use client';
 
 import cn from 'classnames';
-import { ComponentPropsWithoutRef, ReactNode } from 'react';
+import { ComponentPropsWithoutRef } from 'react';
 
 import Arrow from '../Icons/Arrow';
 
 type IndexProps = ComponentPropsWithoutRef<'button'> & {
-  children: ReactNode;
   icon?: 'arrow';
   iconClass?: string;
 };

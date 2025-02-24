@@ -4,6 +4,8 @@ import cn from 'classnames';
 import { EmblaCarouselType } from 'embla-carousel';
 import { ComponentPropsWithRef, useCallback, useEffect, useState } from 'react';
 
+import IconButton from '../IconButton';
+
 type UsePrevNextButtonsType = {
   prevBtnDisabled: boolean;
   nextBtnDisabled: boolean;
@@ -52,13 +54,10 @@ export const usePrevNextButtons = (
 
 type PropType = ComponentPropsWithRef<'button'>;
 
-const buttonStyles =
-  'flex h-10 w-10 items-center justify-center rounded-full border border-[2px] border-white';
-
 export const PrevButton = ({ children, ...restProps }: PropType) => {
   return (
-    <button
-      className={cn('embla__button embla__button--prev', buttonStyles)}
+    <IconButton
+      className={cn('embla__button embla__button--prev')}
       type="button"
       {...restProps}
     >
@@ -69,7 +68,7 @@ export const PrevButton = ({ children, ...restProps }: PropType) => {
         />
       </svg>
       {children}
-    </button>
+    </IconButton>
   );
 };
 
@@ -77,8 +76,8 @@ export const NextButton: React.FC<PropType> = (props) => {
   const { children, ...restProps } = props;
 
   return (
-    <button
-      className={cn('embla__button embla__button--next', buttonStyles)}
+    <IconButton
+      className={cn('embla__button embla__button--next')}
       type="button"
       {...restProps}
     >
@@ -89,6 +88,6 @@ export const NextButton: React.FC<PropType> = (props) => {
         />
       </svg>
       {children}
-    </button>
+    </IconButton>
   );
 };
