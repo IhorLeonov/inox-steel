@@ -32,7 +32,7 @@ export const Works = () => {
           <GalleryImage key={id} id={id} image={image} />
         ))}
 
-        <InoxIcon className="fill-dark-grey" />
+        <InoxIcon className="h-auto w-full fill-dark-grey" />
       </div>
 
       <div className="mt-6 hidden grid-cols-3 gap-4 md:mt-10 md:grid xl:mt-[60px]">
@@ -40,8 +40,8 @@ export const Works = () => {
           <GalleryImage key={id} id={id} image={image} />
         ))}
 
-        <InIcon className="fill-dark-grey" />
-        <OxIcon className="fill-dark-grey" />
+        <InIcon className="h-auto w-full fill-dark-grey" />
+        <OxIcon className="h-auto w-full fill-dark-grey" />
 
         {IMAGES.slice(-2).map(({ id, image }) => (
           <GalleryImage key={id} id={id} image={image} />
