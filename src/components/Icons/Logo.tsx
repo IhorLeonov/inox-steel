@@ -6,7 +6,7 @@ type Props = {
   color?: string;
 };
 
-const Logo = ({ width, className, color = '#1A1A1A' }: Props) => {
+const Logo = ({ width, className, color = '#FFFFFF' }: Props) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -24,9 +24,12 @@ const Logo = ({ width, className, color = '#1A1A1A' }: Props) => {
       <path d="M15.7728 8.00183V39.8048L0 24.0252V8.00183H15.7728Z" />
       <path
         d="M260.02 60.5H244.02L263.02 89.5H279.02L260.02 60.5Z"
-        fill="white"
+        // fill="white"
       />
-      <path d="M225.02 8H209.02L228.02 37.5H244.52L225.02 8Z" fill="white" />
+      <path
+        d="M225.02 8H209.02L228.02 37.5H244.52L225.02 8Z"
+        // fill="white"
+      />
     </svg>
   );
 };

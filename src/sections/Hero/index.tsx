@@ -9,7 +9,7 @@ export const Hero = () => {
       tag="section"
       className="relative overflow-visible pb-[40px] pt-[70px] md:min-h-[calc(100vh_-_68px)] md:pb-[600px] md:pt-[80px] lg:pb-[480px] xl:pb-[360px] xl:pt-[120px]"
     >
-      <h1 className="w-full translate-x-[-3vw] text-center text-[39.7vw] leading-[1] text-dark-grey smm:translate-x-[-2vw] md:translate-x-[-12px] md:text-start md:text-[178px] xl:translate-x-[-24px] xl:text-[320px]">
+      <h1 className="w-full translate-x-[-3vw] text-center text-[39.7vw] leading-[1] text-dark-grey smm:translate-x-[-2vw] md:translate-x-[-12px] md:text-start md:text-[230px] xl:translate-x-[-24px] xl:text-[320px]">
         INOX
       </h1>
 

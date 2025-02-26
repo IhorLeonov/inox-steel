@@ -7,7 +7,7 @@ export default function Htag({ children, className }: HtagProps) {
   return (
     <h2
       className={cn(
-        'text-[24px] font-medium uppercase leading-[1.2] text-accent',
+        'text-[24px] font-medium uppercase leading-[1.2] text-accent md:text-[32px] xl:text-[44px]',
         className,
       )}
     >

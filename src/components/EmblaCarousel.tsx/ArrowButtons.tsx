@@ -57,7 +57,7 @@ type PropType = ComponentPropsWithRef<'button'>;
 export const PrevButton = ({ children, ...restProps }: PropType) => {
   return (
     <IconButton
-      className={cn('embla__button embla__button--prev')}
+      className={cn('embla__button embla__button--prev pr-[2px]')}
       type="button"
       {...restProps}
     >
@@ -77,7 +77,7 @@ export const NextButton: React.FC<PropType> = (props) => {
 
   return (
     <IconButton
-      className={cn('embla__button embla__button--next')}
+      className={cn('embla__button embla__button--next pl-[2px]')}
       type="button"
       {...restProps}
     >

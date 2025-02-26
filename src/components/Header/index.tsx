@@ -11,8 +11,8 @@ export const Header = () => {
     <header
       className={`fixed top-0 z-50 flex h-[52px] w-full items-center backdrop-blur-sm md:h-[68px]`}
     >
-      <Container className="flex items-center justify-between">
-        <LogoIcon className="h-7 fill-dark-grey md:h-9" />
+      <Container className="flex items-center justify-between py-0">
+        <LogoIcon className="h-7 transition-colors hover:fill-dark-grey md:h-9" />
 
         <nav className="mx-auto hidden lg:block">
           <ul className="flex gap-10 xl:gap-20">
