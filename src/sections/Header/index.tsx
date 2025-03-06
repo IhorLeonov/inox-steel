@@ -1,17 +1,17 @@
-import { Container } from '@/components/Container';
-import { LINKS } from '@/components/Header/constants';
+import Button from '@components/Button';
+import MenuIcon from '@components/Icons/BurgerMenu';
+import LogoIcon from '@components/Icons/Logo';
+import LangTabs from '@components/LangTabs';
 
-import Button from '../Button';
-import MenuIcon from '../Icons/BurgerMenu';
-import LogoIcon from '../Icons/Logo';
-import LangTabs from '../LangTabs';
+import { Container } from '@/components/Container';
+import { LINKS } from '@/sections/Header/constants';
 
 export const Header = () => {
   return (
     <header
       className={`fixed top-0 z-50 flex h-[52px] w-full items-center backdrop-blur-sm md:h-[68px]`}
     >
-      <Container className="flex items-center justify-between py-0">
+      <Container className="flex items-center justify-between !py-0">
         <LogoIcon className="h-7 transition-colors hover:fill-dark-grey md:h-9" />
 
         <nav className="mx-auto hidden lg:block">

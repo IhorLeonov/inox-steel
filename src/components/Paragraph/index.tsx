@@ -1,9 +1,9 @@
 import cn from 'classnames';
 import { ComponentPropsWithoutRef } from 'react';
 
-type PProps = ComponentPropsWithoutRef<'p'> & {};
+type ParagraphProps = ComponentPropsWithoutRef<'p'> & {};
 
-export default function P({ children, className }: PProps) {
+export default function Paragraph({ children, className }: ParagraphProps) {
   return (
     <p
       className={cn(

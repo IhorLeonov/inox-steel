@@ -2,8 +2,8 @@ import { EmblaOptionsType } from 'embla-carousel';
 
 import { Container } from '@/components/Container';
 import EmblaCarousel from '@/components/EmblaCarousel.tsx';
-import Htag from '@/components/Htag';
-import P from '@/components/P';
+import Htag from '@/components/Heading';
+import P from '@/components/Paragraph';
 
 import { SLIDES } from './constants';
 
@@ -16,7 +16,7 @@ export const Services = () => {
   return (
     <Container id="services" tag="section" className="pb-10">
       <div className="justify-between md:flex">
-        <Htag>наші послуги</Htag>
+        <Htag tag="h2">наші послуги</Htag>
         <P className="mt-2 md:max-w-[50%]">
           Ми пропонуємо широкий спектр послуг по виготовленню виробів з{' '}
           <span className="text-white">нержавіючої </span>сталі для дому,

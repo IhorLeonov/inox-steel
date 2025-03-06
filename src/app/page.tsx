@@ -1,9 +1,9 @@
-import { Footer } from '@/components/Footer';
-import { Header } from '@/components/Header';
 import { Advantages } from '@/sections/Advantages';
 import { Consultation } from '@/sections/Consultation';
+import { Footer } from '@/sections/Footer';
+import { Header } from '@/sections/Header';
 import { Hero } from '@/sections/Hero';
-import { Promotion } from '@/sections/Promotion';
+// import { Promotion } from '@/sections/Promotion';
 import { Services } from '@/sections/Services';
 import { Works } from '@/sections/Works';
 
@@ -15,7 +15,7 @@ export default function Home() {
         <Hero />
         <Services />
         <Works />
-        <Promotion />
+        {/* <Promotion /> */}
         <Advantages />
         <Consultation />
       </main>

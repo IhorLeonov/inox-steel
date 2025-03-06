@@ -1,13 +1,12 @@
 import Image from 'next/image';
 
 import { Container } from '@/components/Container';
-import Htag from '@/components/Htag';
+import Heading from '@/components/Heading';
+import InIcon from '@/components/Icons/In';
+import InoxIcon from '@/components/Icons/Inox';
+import OxIcon from '@/components/Icons/Ox';
 
 import { IMAGES } from './constants';
-
-import InIcon from '@public/images/works/in.svg';
-import InoxIcon from '@public/images/works/inox.svg';
-import OxIcon from '@public/images/works/ox.svg';
 
 export const GalleryImage = ({ id, image }: { id: number; image: string }) => {
   return (
@@ -25,7 +24,7 @@ export const GalleryImage = ({ id, image }: { id: number; image: string }) => {
 export const Works = () => {
   return (
     <Container tag="section">
-      <Htag>наші роботи</Htag>
+      <Heading tag="h2">наші роботи</Heading>
 
       <div className="mt-6 grid grid-cols-2 gap-3 md:mt-10 md:hidden xl:mt-[60px]">
         {IMAGES.map(({ id, image }) => (
