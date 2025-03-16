@@ -21,7 +21,7 @@ export default function TextItem({ className, title, desc }: TextItemProps) {
       tabIndex={1}
       onClick={() => setIsOpen(!isOpen)}
       className={twMerge(
-        'group h-[53px] cursor-pointer overflow-y-hidden border-b border-b-black py-4 transition-all duration-300 md:h-[64px] md:py-5',
+        'group h-[53px] cursor-pointer overflow-y-hidden border-b border-b-dark-grey py-4 transition-all duration-300 md:h-[64px] md:py-5',
         className,
         isOpen && 'h-[124px] md:h-[140px]',
       )}

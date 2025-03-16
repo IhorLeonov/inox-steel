@@ -21,7 +21,7 @@ export default function Button({
     <button
       {...props}
       className={cn(
-        'flex h-10 items-center justify-center rounded-full bg-white px-6',
+        'group flex h-10 items-center justify-center rounded-full bg-white px-6 transition-all',
         'hover:bg-dark-grey hover:text-white focus:bg-dark-grey focus:text-white',
         icon && 'gap-1 pr-[22px]',
         className,
@@ -29,7 +29,15 @@ export default function Button({
     >
       {children}
 
-      {icon === 'arrow' && <Arrow className={cn('size-5', iconClass)} />}
+      {icon === 'arrow' && (
+        <Arrow
+          className={cn(
+            'size-5',
+            // 'transition-all group-hover:rotate-45',
+            iconClass,
+          )}
+        />
+      )}
     </button>
   );
 }
