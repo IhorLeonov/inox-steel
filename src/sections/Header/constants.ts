@@ -1,5 +1,5 @@
 export const LINKS = [
-  { label: 'Наші послуги', link: 'services', type: '#' },
-  { label: 'Переваги', link: 'advantages', type: '#' },
-  { label: '+380980880308', link: '+380980880308', type: 'tel:' },
+  { label: 'Наші послуги', type: '#', link: 'services' },
+  { label: 'Переваги', type: '#', link: 'advantages' },
+  { label: '+380980880308', type: 'tel:', link: '+380980880308' },
 ];

@@ -15,13 +15,18 @@ export const Container = ({
   children,
   className,
   tag = 'div',
+  ...props
 }: ContainerProps) => {
   return (
     <>
       {tag === 'div' ? (
-        <div className={cn(styles, className)}>{children}</div>
+        <div className={cn(styles, className)} {...props}>
+          {children}
+        </div>
       ) : (
-        <section className={cn(styles, className)}>{children}</section>
+        <section className={cn(styles, className)} {...props}>
+          {children}
+        </section>
       )}
     </>
   );

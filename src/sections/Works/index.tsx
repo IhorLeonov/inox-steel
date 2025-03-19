@@ -2,9 +2,9 @@ import Image from 'next/image';
 
 import { Container } from '@/components/Container';
 import Heading from '@/components/Heading';
-import InIcon from '@/components/Icons/In';
-import InoxIcon from '@/components/Icons/Inox';
-import OxIcon from '@/components/Icons/Ox';
+import InIcon from '@/components/Icons/works/In';
+import InoxIcon from '@/components/Icons/works/Inox';
+import OxIcon from '@/components/Icons/works/Ox';
 
 import { IMAGES } from './constants';
 
@@ -23,7 +23,7 @@ export const GalleryImage = ({ id, image }: { id: number; image: string }) => {
 
 export const Works = () => {
   return (
-    <Container tag="section">
+    <Container id="works" tag="section">
       <Heading tag="h2">наші роботи</Heading>
 
       <div className="mt-6 grid grid-cols-2 gap-3 md:mt-10 md:hidden xl:mt-[60px]">

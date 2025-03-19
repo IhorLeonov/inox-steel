@@ -2,6 +2,7 @@ import Button from '@components/Button';
 import MenuIcon from '@components/Icons/BurgerMenu';
 import LogoIcon from '@components/Icons/Logo';
 import LangTabs from '@components/LangTabs';
+import Link from 'next/link';
 
 import { Container } from '@/components/Container';
 import { LINKS } from '@/sections/Header/constants';
@@ -18,12 +19,12 @@ export const Header = () => {
           <ul className="flex gap-10 xl:gap-20">
             {LINKS.map(({ label, link, type }) => (
               <li key={link}>
-                <a
+                <Link
                   href={`${type}${link}`}
                   className="hover:text-white focus:text-white"
                 >
                   {label}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>

@@ -1,9 +1,14 @@
+'use client';
+
 import Image from 'next/image';
+import { useRouter } from 'next/navigation';
 
 import Button from '@/components/Button';
 import { Container } from '@/components/Container';
 
 export const Hero = () => {
+  const router = useRouter();
+
   return (
     <Container
       tag="section"
@@ -20,6 +25,7 @@ export const Hero = () => {
       <Button
         className="mx-auto mt-7 md:mx-0 md:mt-10 xl:mt-[60px]"
         icon="arrow"
+        onClick={() => router.push('#services')}
       >
         Переглянути каталог
       </Button>
