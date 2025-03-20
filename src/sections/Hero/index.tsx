@@ -15,11 +15,11 @@ export const Hero = () => {
       className="relative overflow-visible pb-[40px] pt-[70px] md:min-h-[calc(100vh_-_68px)] md:pb-[600px] md:pt-[80px] lg:pb-[480px] xl:pb-[360px] xl:pt-[120px]"
     >
       <h1 className="w-full translate-x-[-3vw] text-center text-[39.7vw] leading-[1] text-dark-grey smm:translate-x-[-2vw] md:translate-x-[-12px] md:text-start md:text-[230px] xl:translate-x-[-24px] xl:text-[320px]">
-        INOX
+        INO<span className="xl:text-white">X</span>
       </h1>
 
-      <h2 className="mt-5 text-center text-[5.333vw] font-normal uppercase text-accent md:mt-7 md:max-w-[420px] md:text-start md:text-[32px] xl:mt-[40px] xl:max-w-[570px] xl:text-[44px]">
-        Індивідуальні рішення з нержавіючої сталі
+      <h2 className="mt-5 text-center text-[5.333vw] font-normal uppercase text-white md:mt-7 md:max-w-[420px] md:text-start md:text-[32px] xl:mt-[40px] xl:max-w-[570px] xl:text-[40px]">
+        Індивідуальні рішення <br /> з нержавіючої сталі
       </h2>
 
       <Button
@@ -30,7 +30,16 @@ export const Hero = () => {
         Переглянути каталог
       </Button>
 
-      <div className="relative right-0 overflow-visible before:absolute before:inset-0 before:rounded-full before:bg-white/80 before:blur-[13.867vw] before:content-[''] md:absolute md:top-[360px] md:w-[615px] md:before:blur-[7vw] lg:top-[240px] xl:right-[-60px] xl:top-[80px] xl:z-[-1] xl:w-[971px]">
+      <Image
+        src="/images/hero/hero-desktop.jpg"
+        width={615}
+        height={560}
+        alt="Стальна 3d фігура"
+        className="absolute left-[586px] top-[164px] z-[-1] hidden h-auto w-[814px] xl:block"
+        unoptimized
+      />
+
+      {/* <div className="relative right-0 overflow-visible before:absolute before:inset-0 before:rounded-full before:bg-white/80 before:blur-[13.867vw] before:content-[''] md:absolute md:top-[360px] md:w-[615px] md:before:blur-[7vw] lg:top-[240px] xl:right-[-60px] xl:top-[80px] xl:z-[-1] xl:w-[971px]">
         <Image
           src="/images/hero-mobile.png"
           width={434}
@@ -55,7 +64,7 @@ export const Hero = () => {
           className="relative z-10 hidden h-auto w-full xl:block"
           unoptimized
         />
-      </div>
+      </div> */}
     </Container>
   );
 };

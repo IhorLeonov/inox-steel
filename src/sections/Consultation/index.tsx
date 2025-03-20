@@ -6,10 +6,9 @@ import { useState } from 'react';
 import Button from '@/components/Button';
 import { Container } from '@/components/Container';
 import Heading from '@/components/Heading';
+import InoxIcon from '@/components/Icons/works/Inox';
 
 import FormField from './FormField';
-
-import steelImage from '@public/images/steel-2.jpg';
 
 export const Consultation = () => {
   const [name, setName] = useState('');
@@ -57,7 +56,7 @@ export const Consultation = () => {
           <Button
             type="submit"
             icon="arrow"
-            className="mt-4 w-full md:ml-auto md:mt-5 md:w-[180px] xl:mt-[60px]"
+            className="mt-10 w-full md:ml-auto md:mt-5 md:w-[180px] xl:mt-[60px]"
             onClick={handleSubmit}
           >
             Надіслати
@@ -65,14 +64,18 @@ export const Consultation = () => {
         </form>
       </div>
 
-      <Image
-        src={steelImage}
-        width={540}
-        height={540}
-        alt="Сталеві листи"
-        className="mt-6 h-auto w-full rounded-2xl md:mt-0 md:w-1/2"
-        quality={100}
-      />
+      <div className="relative mt-10 w-full overflow-hidden rounded-2xl md:mt-0 md:w-1/2">
+        <Image
+          src="/images/steel-cubes.jpg"
+          width={540}
+          height={540}
+          alt="Сталеві листи"
+          className="h-auto w-full"
+          quality={100}
+        />
+
+        <InoxIcon className="absolute inset-0 h-auto w-full fill-white" />
+      </div>
     </Container>
   );
 };

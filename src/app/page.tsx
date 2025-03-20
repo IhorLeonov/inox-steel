@@ -9,7 +9,7 @@ import { Works } from '@/sections/Works';
 
 export default function Home() {
   return (
-    <div>
+    <>
       <Header />
       <main className="mt-[52px] md:mt-[68px]">
         <Hero />
@@ -20,6 +20,6 @@ export default function Home() {
         <Consultation />
       </main>
       <Footer />
-    </div>
+    </>
   );
 }
