@@ -21,22 +21,26 @@ export const Header = () => {
   >();
 
   const handleButtonClick = () => {
-    if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(
-        (position) => {
-          const { latitude, longitude } = position.coords;
-          setLocation({ latitude, longitude });
-        },
-        (error) => {
-          console.error('Ошибка при получении геолокации: ', error);
-        },
-      );
-    } else {
-      console.log('Геолокация не поддерживается этим браузером.');
-    }
+    // if (navigator.geolocation) {
+    //   navigator.geolocation.getCurrentPosition(
+    //     (position) => {
+    //       const { latitude, longitude } = position.coords;
+    //       setLocation({ latitude, longitude });
+    //     },
+    //     (error) => {
+    //       console.error('Ошибка при получении геолокации: ', error);
+    //     },
+    //   );
+    // } else {
+    //   console.log('Геолокация не поддерживается этим браузером.');
+    // }
 
-    sendGAEvent('event', 'get_location', {
-      value: location || 'User rejected access to location',
+    // sendGAEvent('event', 'get_location', {
+    //   value: location || 'User rejected access to location',
+    // });
+
+    sendGAEvent('event', 'button_clicked', {
+      value: 'user clicked the button',
     });
   };
 
