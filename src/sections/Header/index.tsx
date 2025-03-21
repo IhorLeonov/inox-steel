@@ -1,13 +1,40 @@
+'use client';
+
 import Button from '@components/Button';
 import MenuIcon from '@components/Icons/BurgerMenu';
 import LogoIcon from '@components/Icons/Logo';
 import LangTabs from '@components/LangTabs';
+import { sendGTMEvent } from '@next/third-parties/google';
 import Link from 'next/link';
+import { useState } from 'react';
 
 import { Container } from '@/components/Container';
 import { LINKS } from '@/sections/Header/constants';
 
 export const Header = () => {
+  const [location, setLocation] = useState<{
+    latitude: number;
+    longitude: number;
+  } | null>(null);
+
+  const handleButtonClick = () => {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(
+        (position) => {
+          const { latitude, longitude } = position.coords;
+          setLocation({ latitude, longitude });
+        },
+        (error) => {
+          console.error('Ошибка при получении геолокации: ', error);
+        },
+      );
+    } else {
+      console.log('Геолокация не поддерживается этим браузером.');
+    }
+
+    sendGTMEvent({ event: 'get_location', value: location });
+  };
+
   return (
     <header
       className={`fixed top-0 z-50 flex h-[52px] w-full items-center backdrop-blur-sm md:h-[68px]`}
@@ -33,6 +60,7 @@ export const Header = () => {
         <Button
           icon="arrow"
           className="ml-auto mr-5 hidden md:flex lg:ml-0 xl:mr-10"
+          onClick={handleButtonClick}
         >
           Зробити замовлення
         </Button>

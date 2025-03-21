@@ -9,9 +9,12 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@next/third-parties": "^15.2.3",
     "embla-carousel-autoplay": "^8.5.2",
     "embla-carousel-react": "^8.5.2",
+    "i": "^0.3.7",
     "next": "15.1.2",
+    "npm": "^11.2.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "tailwind-merge": "^3.0.2"
