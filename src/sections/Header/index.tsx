@@ -4,7 +4,7 @@ import Button from '@components/Button';
 import MenuIcon from '@components/Icons/BurgerMenu';
 import LogoIcon from '@components/Icons/Logo';
 import LangTabs from '@components/LangTabs';
-import { sendGTMEvent } from '@next/third-parties/google';
+import { sendGAEvent } from '@next/third-parties/google';
 import Link from 'next/link';
 import { useState } from 'react';
 
@@ -12,10 +12,13 @@ import { Container } from '@/components/Container';
 import { LINKS } from '@/sections/Header/constants';
 
 export const Header = () => {
-  const [location, setLocation] = useState<{
-    latitude: number;
-    longitude: number;
-  } | null>(null);
+  const [location, setLocation] = useState<
+    | {
+        latitude: number;
+        longitude: number;
+      }
+    | undefined
+  >();
 
   const handleButtonClick = () => {
     if (navigator.geolocation) {
@@ -32,7 +35,9 @@ export const Header = () => {
       console.log('Геолокация не поддерживается этим браузером.');
     }
 
-    sendGTMEvent({ event: 'get_location', value: location });
+    sendGAEvent('event', 'get_location', {
+      value: location || 'User rejected access to location',
+    });
   };
 
   return (
