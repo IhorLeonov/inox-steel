@@ -6,19 +6,19 @@ import LogoIcon from '@components/Icons/Logo';
 import LangTabs from '@components/LangTabs';
 import { sendGAEvent } from '@next/third-parties/google';
 import Link from 'next/link';
-import { useState } from 'react';
 
+// import { useState } from 'react';
 import { Container } from '@/components/Container';
 import { LINKS } from '@/sections/Header/constants';
 
 export const Header = () => {
-  const [location, setLocation] = useState<
-    | {
-        latitude: number;
-        longitude: number;
-      }
-    | undefined
-  >();
+  // const [location, setLocation] = useState<
+  //   | {
+  //       latitude: number;
+  //       longitude: number;
+  //     }
+  //   | undefined
+  // >();
 
   const handleButtonClick = () => {
     // if (navigator.geolocation) {
