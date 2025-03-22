@@ -1,30 +1,42 @@
-import cn from 'classnames';
-import { ComponentPropsWithoutRef } from 'react';
+'use client';
+
+import { ComponentPropsWithoutRef, Dispatch, SetStateAction } from 'react';
+import { twMerge } from 'tailwind-merge';
 
 type LangTabsProps = ComponentPropsWithoutRef<'div'> & {
-  select: 'ua' | 'ru';
+  selectedLanguege: 'ua' | 'ru';
+  setSelectedLanguage: Dispatch<SetStateAction<'ua' | 'ru'>>;
 };
 
-export default function LangTabs({ select, className }: LangTabsProps) {
+export default function LangTabs({
+  className,
+  selectedLanguege,
+  setSelectedLanguage,
+}: LangTabsProps) {
   return (
     <div
-      className={cn(
+      className={twMerge(
         'flex gap-1 text-[20px] font-light text-dark-grey lg:gap-2',
         className,
       )}
     >
       <button
-        className={cn(
-          'py-0.5 hover:border-accent hover:text-accent focus:text-accent',
-          select === 'ua' && 'border-b border-black font-normal text-black',
+        onClick={() => setSelectedLanguage('ua')}
+        className={twMerge(
+          'py-0.5 transition-colors hover:border-accent hover:text-accent focus:text-accent',
+          selectedLanguege === 'ua' &&
+            'border-b border-white font-normal text-white',
         )}
       >
         UA
       </button>
+
       <button
-        className={cn(
-          'py-0.5 hover:border-accent hover:text-accent focus:text-accent',
-          select === 'ru' && 'border-b border-black font-normal text-black',
+        onClick={() => setSelectedLanguage('ru')}
+        className={twMerge(
+          'py-0.5 transition-colors hover:border-accent hover:text-accent focus:text-accent',
+          selectedLanguege === 'ru' &&
+            'border-b border-white font-normal text-white',
         )}
       >
         RU

@@ -15,8 +15,12 @@ export const Footer = () => {
               Наші контакти
             </Heading>
 
-            <Link href="tel:+380980880308">+380980880308</Link>
-            <Link href="mailto:inoxteam@gmail.com">inoxteam@gmail.com</Link>
+            <Link type="footer" href="tel:+380980880308">
+              +380980880308
+            </Link>
+            <Link type="footer" href="mailto:inoxteam@gmail.com">
+              inoxteam@gmail.com
+            </Link>
           </ListItem>
 
           <ListItem>
@@ -24,8 +28,12 @@ export const Footer = () => {
               месенджери
             </Heading>
 
-            <Link href="">Viber</Link>
-            <Link href="">Telegram</Link>
+            <Link type="footer" href="">
+              Viber
+            </Link>
+            <Link type="footer" href="">
+              Telegram
+            </Link>
           </ListItem>
 
           <ListItem>
@@ -33,8 +41,12 @@ export const Footer = () => {
               соцмережі
             </Heading>
 
-            <Link href="">Instagram</Link>
-            <Link href="">Facebook</Link>
+            <Link type="footer" href="">
+              Instagram
+            </Link>
+            <Link type="footer" href="">
+              Facebook
+            </Link>
           </ListItem>
         </ul>
 
