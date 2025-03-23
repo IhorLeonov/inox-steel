@@ -1,7 +1,7 @@
 'use client';
 
-import cn from 'classnames';
 import { ComponentPropsWithoutRef } from 'react';
+import { twMerge } from 'tailwind-merge';
 
 import Arrow from '../Icons/Arrow';
 
@@ -20,26 +20,15 @@ export default function Button({
   return (
     <button
       {...props}
-      className={cn(
-        'group flex h-10 items-center justify-center rounded-full bg-white px-6 transition-all',
-        'hover:bg-dark-grey hover:text-white focus:bg-dark-grey focus:text-white',
-        // 'group flex h-10 items-center justify-center rounded-full bg-white px-6 transition-all',
-        // 'hover:bg-accent hover:text-black focus:bg-accent focus:text-black',
+      className={twMerge(
+        'group flex h-10 items-center justify-center rounded-full bg-white px-6 transition-all hover:bg-dark-grey hover:text-white focus:bg-dark-grey focus:text-white',
         icon && 'gap-1 pr-[22px]',
         className,
       )}
     >
       {children}
 
-      {icon === 'arrow' && (
-        <Arrow
-          className={cn(
-            'size-5',
-            // 'transition-all group-hover:rotate-45',
-            iconClass,
-          )}
-        />
-      )}
+      {icon === 'arrow' && <Arrow className={twMerge('size-5', iconClass)} />}
     </button>
   );
 }

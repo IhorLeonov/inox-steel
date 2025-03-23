@@ -1,26 +1,30 @@
 'use client';
 
 import Button from '@components/Button';
-import MenuIcon from '@components/Icons/BurgerMenu';
 import LogoIcon from '@components/Icons/Logo';
 import LangTabs from '@components/LangTabs';
-import { sendGAEvent } from '@next/third-parties/google';
+// import { sendGAEvent } from '@next/third-parties/google';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { twMerge } from 'tailwind-merge';
 
 import { Container } from '@/components/Container';
+import IconButton from '@/components/IconButton';
 import { LINKS } from '@/sections/Header/constants';
-import MobileMenu from '@/sections/MobileMenu';
+import MobileMenu from '@/sections/MobileMenu.tsx';
+
+import OrderModal from '../OrderModal';
 
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [selectedLanguege, setSelectedLanguage] = useState<'ua' | 'ru'>('ua');
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleButtonClick = () => {
-    sendGAEvent('event', 'button_clicked', {
-      value: 'user clicked the button',
-    });
+    // sendGAEvent('event', 'button_clicked', {
+    //   value: 'user clicked the button',
+    // });
+    setIsModalOpen(true);
   };
 
   useEffect(() => {
@@ -65,12 +69,11 @@ export const Header = () => {
             Зробити замовлення
           </Button>
 
-          <button
+          <IconButton
             className="lg:hidden"
             onClick={() => setIsMenuOpen((prev) => !prev)}
-          >
-            <MenuIcon className="h-9" />
-          </button>
+            icon="menu"
+          />
 
           <LangTabs
             className="hidden lg:flex"
@@ -81,11 +84,13 @@ export const Header = () => {
       </header>
 
       <MobileMenu
-        className={twMerge(isMenuOpen && 'translate-x-0 lg:hidden')}
+        className={twMerge(isMenuOpen && 'translate-x-0 opacity-100 lg:hidden')}
         handleClose={() => setIsMenuOpen(false)}
         selectedLanguege={selectedLanguege}
         setSelectedLanguage={setSelectedLanguage}
       />
+
+      <OrderModal isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen} />
     </>
   );
 };

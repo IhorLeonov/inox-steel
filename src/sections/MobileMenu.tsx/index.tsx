@@ -5,7 +5,7 @@ import { twMerge } from 'tailwind-merge';
 import Button from '@/components/Button';
 import { Container } from '@/components/Container';
 import Heading from '@/components/Heading';
-import Cross from '@/components/Icons/Cross';
+import IconButton from '@/components/IconButton';
 import LangTabs from '@/components/LangTabs';
 
 import Link from '../Footer/Link';
@@ -29,17 +29,17 @@ export default function MobileMenu({
     <aside
       className={twMerge(
         'fixed left-0 top-0 z-[100] h-[100dvh] w-full overflow-scroll bg-gray pb-10',
-        'translate-x-full transition-transform duration-300',
+        'translate-x-full opacity-0 transition-all duration-500',
         className,
       )}
     >
-      <Container className="flex h-full flex-col justify-between py-0 md:gap-10 md:py-0">
-        <div className="flex h-[52px] items-center justify-between">
-          <span className="text-[30px] font-medium text-white">INOX</span>
+      <Container className="flex h-full flex-col justify-between !py-0 md:h-auto md:justify-start md:gap-10">
+        <div className="flex h-[52px] items-center justify-between md:min-h-[68px]">
+          <span className="text-[30px] font-medium text-white md:text-[40px]">
+            INOX
+          </span>
 
-          <button onClick={handleClose}>
-            <Cross className="h-9" />
-          </button>
+          <IconButton onClick={handleClose} icon="close" />
         </div>
 
         <ul className="z-10 flex flex-col justify-between gap-6 md:gap-10">

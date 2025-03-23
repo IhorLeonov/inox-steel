@@ -6,7 +6,7 @@ type Props = {
   color?: string;
 };
 
-const BurgerMenu = ({ width, className, color = '#1A1A1A' }: Props) => {
+const Cross = ({ width, className, color = '#1A1A1A' }: Props) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -17,7 +17,6 @@ const BurgerMenu = ({ width, className, color = '#1A1A1A' }: Props) => {
     >
       <path
         d="M27 9L9 27M9 9L27 27"
-        stroke="#1A1A1A"
         strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
@@ -26,4 +25,4 @@ const BurgerMenu = ({ width, className, color = '#1A1A1A' }: Props) => {
   );
 };
 
-export default BurgerMenu;
+export default Cross;
