@@ -21,7 +21,7 @@ export default function Button({
     <button
       {...props}
       className={twMerge(
-        'group flex h-10 items-center justify-center rounded-full bg-white px-6 transition-all hover:bg-dark-grey hover:text-white focus:bg-dark-grey focus:text-white',
+        'group flex h-10 items-center justify-center rounded-2xl bg-white px-6 transition-all hover:bg-dark-grey hover:text-white focus:bg-dark-grey focus:text-white',
         icon && 'gap-1 pr-[22px]',
         className,
       )}
