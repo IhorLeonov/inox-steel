@@ -1,29 +1,14 @@
 'use client';
 
 import Image from 'next/image';
-import { useState } from 'react';
+import { twMerge } from 'tailwind-merge';
 
-import Button from '@/components/Button';
 import { Container } from '@/components/Container';
 import Heading from '@/components/Heading';
 import InoxIcon from '@/components/Icons/works/Inox';
-
-import FormField from './FormField';
+import OrderForm from '@/components/OrderForm';
 
 export const Consultation = () => {
-  const [name, setName] = useState('');
-  const [phone, setPhone] = useState('');
-  const [message, setMessage] = useState('');
-
-  const handleSubmit = (e: React.MouseEvent<HTMLButtonElement>) => {
-    e.preventDefault();
-    console.log({ name, phone, message });
-
-    setName('');
-    setPhone('');
-    setMessage('');
-  };
-
   return (
     <Container
       tag="section"
@@ -36,35 +21,17 @@ export const Consultation = () => {
           <span>консультацію</span>
         </Heading>
 
-        <form className="mt-4 md:mt-5 xl:mt-[60px]">
-          <FormField
-            placeholder="Ім’я"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-          />
-          <FormField
-            placeholder="Номер телефону"
-            value={phone}
-            onChange={(e) => setPhone(e.target.value)}
-          />
-          <FormField
-            placeholder="Коментар"
-            value={message}
-            onChange={(e) => setMessage(e.target.value)}
-          />
-
-          <Button
-            type="submit"
-            icon="arrow"
-            className="mt-10 w-full md:ml-auto md:mt-5 md:w-[180px] xl:mt-[60px]"
-            onClick={handleSubmit}
-          >
-            Надіслати
-          </Button>
-        </form>
+        <OrderForm
+          className="mt-4 md:mt-5 xl:mt-[60px]"
+          buttonSubmitClass="mt-4 md:ml-auto md:mt-5 md:w-[180px] xl:mt-[60px]"
+        />
       </div>
 
-      <div className="relative mt-10 w-full overflow-hidden rounded-2xl md:mt-0 md:w-1/2">
+      <div
+        className={twMerge(
+          'corner-radius relative mt-10 w-full overflow-hidden md:mt-0 md:w-1/2',
+        )}
+      >
         <Image
           src="/images/steel-cubes.jpg"
           width={540}

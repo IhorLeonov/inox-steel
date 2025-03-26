@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { twMerge } from 'tailwind-merge';
 
 import { Container } from '@/components/Container';
 import Heading from '@/components/Heading';
@@ -11,7 +12,7 @@ import { IMAGES } from './constants';
 export const GalleryImage = ({ id, image }: { id: number; image: string }) => {
   return (
     <Image
-      className="h-auto w-full rounded-2xl"
+      className={twMerge('corner-radius h-auto w-full')}
       key={id}
       src={image}
       width={250}

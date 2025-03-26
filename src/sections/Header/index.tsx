@@ -84,10 +84,11 @@ export const Header = () => {
       </header>
 
       <MobileMenu
-        className={twMerge(isMenuOpen && 'translate-x-0 opacity-100 lg:hidden')}
+        className={twMerge(isMenuOpen && 'translate-x-0 lg:hidden')}
         handleClose={() => setIsMenuOpen(false)}
         selectedLanguege={selectedLanguege}
         setSelectedLanguage={setSelectedLanguage}
+        setIsModalOpen={setIsModalOpen}
       />
 
       <OrderModal isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen} />

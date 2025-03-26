@@ -44,7 +44,7 @@ const EmblaCarousel = ({ slides, options, className }: EmblaCarouselProps) => {
           {slides.map(({ id, image, alt }) => (
             <div className="embla__slide" key={id}>
               <Image
-                className="rounded-2xl"
+                className="corner-radius"
                 src={image}
                 alt={alt}
                 width={852}

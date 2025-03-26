@@ -19,7 +19,7 @@ export default function FormField({
     >
       <input
         className={twMerge(
-          'h-[64px] w-full bg-transparent text-[20px] text-black outline-none transition-transform ease-linear placeholder:text-dark-grey focus:translate-x-[8px]',
+          'w-full bg-transparent py-2 text-black outline-none transition-transform ease-linear placeholder:text-dark-grey focus:translate-x-[8px] md:py-3 md:text-[18px]',
           className,
         )}
         {...props}

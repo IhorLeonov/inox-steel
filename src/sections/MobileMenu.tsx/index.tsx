@@ -15,6 +15,7 @@ type MobileMenuProps = ComponentPropsWithoutRef<'aside'> & {
   handleClose: () => void;
   selectedLanguege: 'ua' | 'ru';
   setSelectedLanguage: Dispatch<SetStateAction<'ua' | 'ru'>>;
+  setIsModalOpen: Dispatch<SetStateAction<boolean>>;
 };
 
 export default function MobileMenu({
@@ -22,6 +23,7 @@ export default function MobileMenu({
   handleClose,
   selectedLanguege,
   setSelectedLanguage,
+  setIsModalOpen,
 }: MobileMenuProps) {
   const router = useRouter();
 
@@ -29,7 +31,7 @@ export default function MobileMenu({
     <aside
       className={twMerge(
         'fixed left-0 top-0 z-[100] h-[100dvh] w-full overflow-scroll bg-gray pb-10',
-        'translate-x-full opacity-0 transition-all duration-500',
+        'translate-x-full transition-all',
         className,
       )}
     >
@@ -108,7 +110,11 @@ export default function MobileMenu({
           </ListItem>
         </ul>
 
-        <Button className="w-full md:max-w-[286px]" icon="arrow">
+        <Button
+          onClick={() => setIsModalOpen(true)}
+          className="w-full md:max-w-[286px]"
+          icon="arrow"
+        >
           Зробити замовлення
         </Button>
 

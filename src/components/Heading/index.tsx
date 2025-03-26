@@ -11,7 +11,7 @@ export default function Heading({ children, className, tag }: HeadingProps) {
       return (
         <h2
           className={cn(
-            'text-[24px] font-medium uppercase leading-[1.2] text-white md:text-[32px] xl:text-[44px]',
+            'text-[24px] font-medium uppercase leading-[1.2] text-white md:text-[28px] xl:text-[36px]',
             className,
           )}
         >

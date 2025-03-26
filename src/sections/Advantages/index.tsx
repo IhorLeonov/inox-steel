@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { twMerge } from 'tailwind-merge';
 
 import { Container } from '@/components/Container';
 import Heading from '@/components/Heading';
@@ -30,7 +31,9 @@ export const Advantages = () => {
         width={540}
         height={540}
         alt="Сталеві листи"
-        className="mt-10 h-auto w-full rounded-2xl md:mt-0 md:w-1/2"
+        className={twMerge(
+          'corner-radius mt-10 h-auto w-full md:mt-0 md:w-1/2',
+        )}
         quality={100}
       />
     </Container>
