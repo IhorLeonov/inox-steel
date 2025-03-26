@@ -16,8 +16,10 @@ export const Services = () => {
   return (
     <Container id="services" tag="section" className="pb-10">
       <div className="justify-between md:flex">
-        <Htag tag="h2">наші послуги</Htag>
-        <P className="mt-2 md:max-w-[50%]">
+        <Htag className="hidden md:block" tag="h2">
+          наші послуги
+        </Htag>
+        <P className="md:mt-2 md:max-w-[50%]">
           Ми пропонуємо широкий спектр послуг по виготовленню виробів з{' '}
           <span className="text-white">нержавіючої </span>сталі для дому,
           зокрема, таких як: перила та поручні, козирки та навіси, сходи та

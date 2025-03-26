@@ -12,7 +12,7 @@ export const Footer = () => {
         <ul className="relative z-10 flex flex-col justify-between gap-6 md:flex-row">
           <ListItem>
             <Heading className="py-2" tag="h3">
-              Наші контакти
+              Контакти
             </Heading>
 
             <Link type="footer" href="tel:+380980880308">

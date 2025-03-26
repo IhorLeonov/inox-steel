@@ -72,7 +72,7 @@ export default function MobileMenu({
 
           <ListItem>
             <Heading className="py-2" tag="h3">
-              Наші контакти
+              Контакти
             </Heading>
 
             <Link href="tel:+380980880308" type="menu">
